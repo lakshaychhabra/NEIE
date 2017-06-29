@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>Search Result</title>
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+        <link rel="stylesheet" href="library/css/search.css">
+        
+        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        <script type="text/javascript" src="library/js/search.anim.js"></script>
+
+        <script src = "library/js/notify-client.js"></script>
+        <style>
+        #people {
+          display:none;
+        }
+        #project {
+          display:block;
+        }
+        #query {
+          display:none;
+        }
+        .activ {
+          color:rgba(100,65,127,0.8) !important;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="tab">
+                <a class="trig_project" style="cursor:pointer; width:32%; border-right:1px solid gray;">Project</a>
+                <a class="trig_profile" style="cursor:pointer; width:32%; border-right:1px solid gray;">Profile</a>
+                <a class="trig_query" style="cursor:pointer; width:32%;">Queries</a>
+            </div>
+            <br>
+            <div id="people">
+              <% for(i=0;i<data.profiles.length;i++) {%>
+                <div class="row Box container-fluid" style="margin-left:1%;">
+                    <div class="col-md-2" style="padding:2%;">
+                        <img class="miniProfilePic">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-9">
+                              <h2><a href="/profile?id=<%= data.profiles[i].email %>"><%= data.profiles[i].fn+" "+data.profiles[i].ln %></a></h2>
+                            </div>
+                            <div class="col-md-3">
+                                <a href="/profile?id=<%= data.profiles[i].email %>"><button class="btn btn-success btn-block" style="margin-top:15%; font-size:18px;">Hire now</button></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h3 class="title">Skills</h3>
+                                <p>
+                                  <% for(j=0;j<data.profiles[i].skills.length;j++) { %>
+                                      <%= data.profiles[i].skills[j].name %>
+                                  <% } %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <% } %>
+              </div>
+            <div id="project">
+              <% for(i=0;i<data.projects.length;i++) {%>
+                <div class="row Box container-fluid" style="margin-left:1%;">
+                    <div class="col-md-2" style="padding:2%;">
+                        <img class="miniProfilePic">
+                    </div>
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h2><%= data.projects[i].projectname %></h2>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-success btn-block" style="margin-top:15%; font-size:18px;" onclick="fire_project('<%= data.projects[i].email %>','<%= data.projects[i]._id %>','<%= cred.email %>')">Apply now</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h3 class="title">Pre-requsites</h3>
+                                <p>
+                                  <% for(j=0;j<data.projects[i].skillsrequired.length;j++) {%>
+                                    <%= data.projects[i].skillsrequired[j].name %>
+                                  <% } %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <% } %>
+            </div>
+            <div id="query">
+			<% for(i=0;i<data.queries.length;i++) {%>
+                <div class="row Box container-fluid" style="margin-left:1%;">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2><a href="/queries?id=<%= data.queries[i]._id %>"><%= data.queries[i].desc %></a></h2>
+                                <p><%= data.queries[i].expec %></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="title">Pre-requsites</h3>
+                                <p><%= data.queries[i].domain %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+				<% } %>
+            </div>
+
+        </div>
+    </body>
+</html>

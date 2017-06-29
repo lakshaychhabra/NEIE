@@ -1,0 +1,53 @@
+<html>
+    <head>
+
+        <link href="library/css/profile.css" rel="stylesheet">
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+    </head>
+    <body>
+        <br>
+        <div class="container-fluid">
+            <div class="row Box">
+                <div class="col-md-4 ">
+                <img src="library/img/ProfilePictureMain.png" class="profile-pic-size" alt="Profile Photo" ><br>
+                </div>
+                <div class="col-md-8 ">
+                    <br>
+                    <div class="row nameSize">
+                        <%= data.orgName %>
+                    </div>
+                    <div class="row title" style="font-size:30px;">
+                        Representative: <span style="color: #c0c0c0"><%= data.fullName %></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row Box">
+                <div class="col-md-12">
+                    <h2 class="title">About us</h2>
+                    <p><%= data.aboutUs %></p>
+                    </div>
+            </div>
+            <br>
+            <div class="row Box">
+                <div id="workExperience" class="col-md-12">
+                    <h2 class="title">Vision</h2>
+                    <p><%= data.vision %></p>
+                    </div>
+            </div>
+            <br>
+            <div class="row Box">
+                <div id="education" class="col-md-12 container-fluid">
+                    <h2 class="title">Corporate Headquaters</h2>
+                        <p><%= data.corpHQ %></p>
+                    <h3 class="title">Founded</h3>
+                        <p><%= data.foundOn %></p>
+                    <h3 class="title">Industry</h3>
+                        <p><%= data.iType %></p>
+
+                    </div>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>

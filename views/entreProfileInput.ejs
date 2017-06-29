@@ -1,0 +1,57 @@
+<html>
+    <head>
+<!--  local links      -->
+        <link rel="stylesheet" href="library/css/signUp.css">
+    </head>
+    <body>
+      <div class="container-fluid">
+          <form class="form-group" method="post" action="/en-profile-save">
+              <br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <i class="fa fa-building" aria-hidden="true"></i><label for="orgName">&nbsp;Organization</label><input name="orgName" id="orgName" class="form-control" required type="text">
+                  </div>
+                  <div class="col-md-6">
+                      <i class="fa fa-user" aria-hidden="true"></i><label for="representative">&nbsp;Full Name</label><input name="repName" id="representative" class="form-control" required type="text">
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                      <label for="aboutUs">About Us</label><textarea name="about" id="aboutUs" class="form-control" rows="5" style="resize:none;"></textarea>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                      <label for="vision">Vision</label><textarea name="vision" id="vision" class="form-control" rows="5" style="resize:none;"></textarea>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                      <label for="headQuater">Corporate Headquaters</label><input name="hqloc" id="headQuater" required class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <i class="fa fa-calendar" aria-hidden="true"></i><label for="foundDate">&nbsp;Founded on</label><input name="fDate" id="foundDate" required class="form-control" type="date">
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                      <i class="fa fa-industry" aria-hidden="true"></i><label for="industry">&nbsp;Industry type</label><textarea name="itype" id="industry" class="form-control" rows="5" required style="resize:none;"></textarea>
+                  </div>
+              </div>
+              <br>
+              <div class="alert alert-info">
+              Kindly check the information before <strong>Submitting</strong>.
+              </div>
+              <br>
+              <button class="btn btn-success" style="margin-left:20%;width:60%;">Submit</button>
+          </form>
+      </div>
+    </body>
+</html>

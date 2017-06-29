@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+body{
+    margin:0;
+    padding: 0;
+    height:100%;
+    width:100%;
+    font-family: nunito;
+    font-size: 18px;
+}
+
+.skill-container{
+ border-top: 3px solid #088A68;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.19);
+    
+    border-radius: 3px;
+    width: 98%;
+    height: 70%;
+    margin:0 auto;
+}
+
+.search-bar{
+    background: rgb(247,247,247);
+    line-height: 40px;
+    padding: 7px 18px;
+    border-bottom: 1px solid rgba(200,200,200,0.3);
+}
+
+.search-bar input{
+    border-radius: 3px;
+    box-shadow: none;
+    border: 0.5px solid rgba(22,22,22,0.3);
+    padding: 20px;
+    color: black;
+}
+
+.search-bar input[placeholder]{
+    padding: 6px 10px;
+}
+
+.skill-items{
+    height: 100%;
+    width: 100%;
+    background: white;
+    display: table;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.skill-items ul li{
+    height: 100px;
+    width: 50%;
+    border: 0.05px solid rgba(22,22,22,0.3);
+    display: table-cell;
+    padding: 10px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 20px;
+    float:left;
+    vertical-align: middle !important;
+    cursor: pointer;
+}
+
+.skill-items ul li:hover{
+    background: rgba(230,230,230,0.2);
+}
+
+.skill-items ul{
+    width: 100%;
+    margin:0;
+    padding: 0;
+}
+
+.btnDisplay{
+    font-size:18px;
+    height:60px;
+}

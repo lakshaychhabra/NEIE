@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<head> 
+	<!-- Styles -->
+	<link rel="stylesheet" href="global/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="global/fontawesome/css/font-awesome.min.css">	
+	<link rel="stylesheet" href="library/css/signUp.css">
+	<link rel="stylesheet" href="library/css/front5.css">
+	<!-- Scripts -->
+	<script src="global/jquery/jquery-3.2.0.min.js"></script>
+	<script src="global/bootstrap/js/bootstrap.min.js"></script>
+    <script src = "global/angular/angular.min.js"></script>    
+    <script src = "global/angular/angular-route.min.js"></script>
+	<script src = "library/js/custom_anim.js"></script>
+	
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#Employee').show();
+            $('#Entre').show();
+            $('#active4').show(); 
+            
+		});            
+    </script>
+	<script>
+		$(document).ready(function(){
+		$("#active1").click(function(){
+        $("#active1").addClass("active");
+        $("#active2,#active3").removeClass("active");
+			});
+		});
+		
+		$(document).ready(function(){
+		$("#active2").click(function(){
+        $("#active1,#active3").removeClass("active");
+        $("#active2").addClass("active");
+			});
+		});
+		
+		$(document).ready(function(){
+		$("#active3").click(function(){
+        $("#active1,#active2").removeClass("active");
+        $("#active3").addClass("active");
+			});
+		});	
+		
+		$(document).ready(function(){
+		$("#active4").click(function(){
+        $("#active5").removeClass("active");
+        $("#active4").addClass("active");
+			});
+		});	
+		
+		$(document).ready(function(){
+		$("#active5").click(function(){
+        $("#active4").removeClass("active");
+        $("#active5").addClass("active");
+			});
+		});
+</script>
+	
+</head>
+<body>
+	<div style="text-align:center;">
+		<!-- Navigation Bar-->
+		<div class="nav-bar">
+			<div class="logo">
+                
+            </div>
+			<div class="nav-bar-sign">
+				<a class="" data-toggle="modal" data-target="#myModal2" ><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
+			
+			</div>
+		</div>
+		<!-- Navigation Bar End-->
+		<div class="fixed-back">
+			<div class="tagline">
+				<p>National Entrepreneurship & Internship Exchange</p>
+			</div>
+			<br>
+			<div style="color:rgba(255,255,255,0.7);">
+				<p style=" font-weight: bold; font-size: 20px;">Supported by<br>Ministry of Skill Development & Entrepreneurship</p>
+			</div>
+			<br>
+			<div>
+				<a class="button" data-toggle="modal" data-target="#entrepreneurSignUp" style=" font-weight: bold; font-size: 20px;">Sign Up</a>
+			</div>
+		</div>
+		
+		
+		<div style="position:absolute; top:88%; background: white; width: 100%;">
+			<div class="section2">
+				<p style="text-transform: uppercase; font-size: 35px; letter-spacing: 1px;">Excepteur sint occaecat cupidatat.</p>
+			</div>
+			<div class="content-row" style="text-align:left;">
+				<div class="content-box">
+					<h3> Get Started Quickly</h3>
+					<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+				</div>
+				<div class="content-box">
+					<h3>Responsive Layout</h3>
+					<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+				</div>
+				<div class="content-box">
+					<h3>Modular</h3>
+					<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+				</div>
+				<div class="content-box">
+					<h3> Play Nice</h3>
+					<p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+				</div>
+			</div>
+		</div>
+        
+        <div class="front-footer">
+            <h2>About Us</h2>
+            <p></p>
+        </div>
+	</div>	
+	
+			
+		
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+		
+			
+				
+		<!-- Login Modal-->
+				<div class="modal fade" id="myModal2" role="dialog" style="text-align:initial;">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Log-in</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <button class="btn btn-block ten" id="active4" onclick="$('#Entre').show();$('#Emp').hide();" name="entre">Entrepreneur</button>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <button class="btn btn-block tem" id="active5" onclick="$('#Emp').show();$('#Entre').hide();" name="empl">Employee</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row content">            
+                                                        <div id="Entre" style="display:none;" class="form-group container-fluid">
+                                                            <form name="login" method="post" action="/login" >
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="email">E-mail</label><input id="email" name="email" type="email" class="form-control" placeholder="e-mail" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="pwd">Password</label><input id="pwd" name="password" type="password" placeholder="Password" class="form-control" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <button class="btn btn-block btn-success"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                                                                <br>
+                                                                <a href="#" data-toggle="modal" data-target="#myModal" style="float:right;" >Forgot Password</a>
+                                                            </form>
+                                                        </div>
+                                                        <div id="Emp" style="display:none;" class="form-group container-fluid">
+                                                            <form name="login" method="post" action="/login" >
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="email">E-mail</label><input id="email" name="email" type="email" class="form-control" placeholder="e-mail" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="pwd">Password</label><input id="pwd" name="password" type="password" placeholder="Password" class="form-control" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <button class="btn btn-block btn-success"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                                                                <br>
+                                                                <a href="#" data-toggle="modal" data-target="#myModal" style="float:right;" >Forgot Password</a>
+                                                            </form>
+                                                        </div>
+                                                                <div>
+                                                                <!-- Modal -->
+                                                                <div class="modal fade" id="myModal" role="dialog">
+                                                                    <div class="modal-dialog">
+                                                                        <!-- Modal content-->
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                                <h4 class="modal-title">Forgot Password?</h4>
+                                                                            </div>
+                                                                            <div class="modal-body form-group" ng-app="mainApp" ng-controller="blabla">
+                                                                                <form>
+                                                                                    <label for="forgetEmail">Enter E-mail </label><input id="forgetEmail" type="email" class="form-control" required><br>
+                                                                                    <button class="btn btn-success" ng-click="message()" data-dismiss="modal">Submit</button>
+                                                                                    <script>
+                                                                                        var app = angular.module("mainApp", []);
+                                                                                        app.controller("blabla",function($scope,$window){
+                                                                                            $scope.message= function(){
+                                                                                                $window.alert("An e-mail has been sent to your account. Please check the mail to proceed for log-in.");
+                                                                                            }
+                                                                                        });
+                                                                                    </script>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                    
+                                                        </div>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+				
+		<!-- Login Modal end-->
+						
+				
+		<!-- Sign up Modal-->
+		<!--Modal for Entrepreneur signup options-->
+			<div class="modal fade" id="entrepreneurSignUp" role="dialog" style="text-align:initial;">
+				<div class="modal-dialog" style="overflow-y:auto;height:90%; width:70%;">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<br>
+							<div class="row">
+								<div class="col-md-4">
+									<button class="btn btn-block active" id="active1" onclick="$('#Employee').show();$('#individualSignUp').hide();$('#organizationSignUp').hide();">Employee</button>
+								</div>
+                                <div class="col-md-4" >
+									<button class="btn btn-block" id="active2" onclick="$('#individualSignUp').show();$('#Employee').hide();$('#organizationSignUp').hide();">Representative of Organization</button>
+								</div>
+								<div class="col-md-4">
+									<button class="btn btn-block" id="active3" onclick="$('#organizationSignUp').show();$('#individualSignUp').hide();$('#Employee').hide();">Organization</button>
+								</div>
+							</div>
+						</div>
+						<div class="modal-body">
+                            <!-- Modal for employee Signup          -->
+                            
+                            <div id="Employee" style="display:none">
+                            <div class="form-group container-fluid">
+							<form name="register" method="post" action="/register" >
+                               	<div class="row">
+									<div class="col-md-6">
+										<label for="fName"><i class="fa fa-user" aria-hidden="true"></i> First Name &nbsp;</label><input placeholder="Your First Name" id="fName" name="fName" class="form-control" type="text" required>
+									</div>
+									<div class="col-md-6">
+										<label for="lName">Last Name &nbsp;</label>
+                                        <input id="lName" class="form-control" type="text" placeholder="Your Last Name" name="lName" required>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-6">
+										<label for="eMail"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail </label><input id="eMail" class="form-control" placeholder="eg. abx@xyz.com" name="eMail" type="email" required>
+									</div>
+									<div class="col-md-6">
+										<label for="web"><i class="fa fa-globe" aria-hidden="true"></i> Website </label><input id="web" class="form-control" placeholder="eg. www.example.com" name="web" type="text">
+									</div>
+								</div>
+								<br>
+                               
+								<div class="row">
+									<div class="col-md-12">
+										<label for="creatpwd">Password</label><input id="creatpwd" class="form-control" type="password" placeholder="*****" name="creatpwd">
+										<span class="text-danger" ng-show="register.createpassword.$dirty && register.createpassword.$invalid"></span>           
+									</div>                    
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-12">
+										<label for="confrmpwd">Confirm Password</label><input id="confrmpwd" class="form-control" type="password" placeholder="*****" name="confrmpwd">
+										<span class="text-danger" ng-show="register.confrmpassword.$dirty && register.confrmpassword.$invalid"></span>           
+									</div>                    
+								</div>
+								<br>
+								<div class="row" >
+									<div class="col-md-12">
+										<label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i> Mobile </label><input id="phone" class="form-control"  placeholder="eg. 9876543210" name="phone" type="text" min="10" maxlength=10  required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+									</div>
+								</div>
+								<br>                
+								<br>
+								<button class="btn btn-success btn-block" style="width:60%; margin-left:20%"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</button>
+                                
+                                
+							</form>    
+						</div>
+                            
+                            </div>
+                            
+                            
+                            
+                            <!-- Modal for employee Signup  ends    -->
+                            
+                            
+                            
+                            
+                            
+                            
+							<!-- Modal for individual entrepreneur signup -->
+							<div id="individualSignUp" style="display:none;">
+							
+				
+							<!-- Modal content-->
+							<div>
+								<div >
+									<div class="form-group container-fluid">
+										<form name="register" method="post" action="/register"  >
+                                            <div class="row">
+												<div class="col-md-6">
+													<label for="fName"><i class="fa fa-user" aria-hidden="true"></i> First Name &nbsp;</label><input id="fName" class="form-control" type="text">
+												</div>
+												<div class="col-md-6">
+													<label for="lName">Last Name &nbsp;</label><input id="lName" class="form-control" type="text">
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="fName"><i class="fa fa-building" aria-hidden="true"></i> Organization Name &nbsp;</label><input id="fName" class="form-control" type="text">
+												</div>								
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-6">
+													<label for="eMail"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail </label><input id="eMail" class="form-control" type="email">
+												</div>
+												<div class="col-md-6">
+													<label for="web"><i class="fa fa-globe" aria-hidden="true"></i> Website </label><input id="web" class="form-control" type="text">
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="creatpwd">Password</label><input id="creatpwd" class="form-control" type="password">
+													<span class="text-danger" ng-show="register.createpassword.$dirty && register.createpassword.$invalid"></span>           
+												</div>                    
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="confrmpwd">Confirm Password</label><input id="confrmpwd" class="form-control" type="password">
+													<span class="text-danger" ng-show="register.confrmpassword.$dirty && register.confrmpassword.$invalid"></span>           
+												</div>                    
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+												<label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i> Mobile </label><input id="phone" class="form-control" type="text" maxlength=10  required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+												</div>
+											</div>
+											<br>                
+											<br>
+											<button class="btn btn-success btn-block" style="width:60%; margin-left:20%"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</button> 
+											
+										</form>    
+									</div>
+        						</div>
+							</div>
+                            </div>    
+						</div>
+						<!--Sign-Up Individual code ends -->
+						<!--Sign-Up organization code -->
+						<div id="organizationSignUp" style="display:none;">
+							<!-- Modal content-->
+							<div>
+								<div>
+									<div class="form-group container-fluid">
+										<form name="register" method="post" action="/register"  >
+                                            <div class="row">
+												<div class="col-md-12">
+													<label for="fName"><i class="fa fa-building" aria-hidden="true"></i> Organization Name &nbsp;</label><input id="fName" class="form-control" type="text">
+												</div>								
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-6">
+													<label for="eMail"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail </label><input id="eMail" class="form-control" type="email">
+												</div>
+												<div class="col-md-6">
+													<label for="web"><i class="fa fa-globe" aria-hidden="true"></i> Website </label><input id="web" class="form-control" type="text">
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="creatpwd">Password</label><input id="creatpwd" class="form-control" type="password">
+													<span class="text-danger" ng-show="register.createpassword.$dirty && register.createpassword.$invalid"></span>           
+												</div>                    
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="confrmpwd">Confirm Password</label><input id="confrmpwd" class="form-control" type="password">
+													<span class="text-danger" ng-show="register.confrmpassword.$dirty && register.confrmpassword.$invalid"></span>           
+												</div>                    
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i> Mobile </label><input id="phone" class="form-control" type="text" maxlength=10  required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+												</div>
+											</div>
+											<br>                
+											<br>
+											<button class="btn btn-success btn-block" style="width:60%; margin-left:20%"><i class="fa fa-user" aria-hidden="true" ></i> Sign Up</button>        
+										</form>    
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Sign-Up organization code ends -->    
+					</div>
+				</div>
+			</div>
+		<!--Modal for Entrepreneur signup options ends-->
+
+<div class="container-fluid">
+		<div style="display:none;">
+            <button class="btn ss" data-toggle="modal" data-target="#signUpSuccessful">SignUpSuccessful</button>
+            <button class="btn pw" data-toggle="modal" data-target="#emailPasswordWrong">emailPasswordWrong</button>
+            <button class="btn ue" data-toggle="modal" data-target="#userExist">userExist</button>
+			<button class="btn pm" data-toggle="modal" data-target="#passDontMatch">PassDontMatch</button>
+			<button class="btn fe" data-toggle="modal" data-target="#fieldsEmpty">FieldsEmpty</button>
+		</div>
+			<!-- Modal Starts    -->
+            <div class="modal fade" id="signUpSuccessful" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Sign Up successful!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="fieldsEmpty" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Fields are Empty!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="passDontMatch" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Passwords do not match !</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="emailPasswordWrong" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="redTitle"><strong>E-mail</strong> or <strong>Password</strong> is incorrect.</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="userExist" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="redTitle">User already exists.</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<div class="container-fluid">
+		<div style="display:none;">
+            <button class="btn" data-toggle="modal" data-target="#projectPosted">projectPosted</button>
+            <button class="btn" data-toggle="modal" data-target="#changesSaved">changesSaved</button>
+            <button class="btn" data-toggle="modal" data-target="#jobPosted">jobPosted</button>
+            <button class="btn" data-toggle="modal" data-target="#delete">delete</button>
+            <button class="btn" data-toggle="modal" data-target="#queryPosted">queryPosted</button>
+		</div>
+			<!-- Modal Starts    -->
+            <div class="modal fade" id="queryPosted" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Query posted!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="projectPosted" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Project posted!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="changesSaved" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Changes saved successfully!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="jobPosted" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Job posted!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="delete" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body container-fluid">
+                            <form>
+                                <div class="row container-fluid">
+                                    <center><h2>Are you sure?</h2></center>
+                                </div>
+                                <div class="row container-fluid">
+                                    <div class="col-md-6">
+                                        <button class="btn btn-block btn-success fontSize">Delete</button>
+                                    </div><div class="col-md-6">
+                                        <button class="btn btn-block btn-danger fontSize">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+        </div>
+        </div>
+</body>
+</html>

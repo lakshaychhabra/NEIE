@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Search Not Found</title>
+        
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <br>
+            <div class="row alertBox container-fluid">
+                <div class="row container-fluid alertTitle">
+                    <h2>Result not found</h2>
+                </div>
+                <br>
+                <div class="row container-fluid">
+                    <p>Your search -<b> <%= data %> </b>- did not match any documents.</p>
+                    <p>Suggestions:</p>
+                    <ul>
+                        <li>Make sure that all words are spelled correctly.</li>
+                        <li>Try different keywords.</li>
+                        <li>Try more general keywords.</li>
+                        <li>Try fewer keywords.</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <!-- Styles -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Local Styles -->
+        <link rel="stylesheet" href="library/css/expertStyle.css">
+        <link rel="stylesheet" href="library/css/profile.css">
+        <link rel="stylesheet" href="library/css/toDoBtn.css">
+        <link rel="stylesheet" href="library/css/passChangeStyle.css">
+        <link rel="stylesheet" href="library/css/notification.css">
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+		<link rel="stylesheet" href="library/css/chat.css">
+		<link rel="stylesheet" href="library/css/style2.css">
+        
+        
+        <!-- Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>    
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
+		<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        
+		<!-- Local Scripts -->
+		<script src = "library/js/custom_anim.js"></script>
+		<script src="library/js/chat-client.js"></script>
+    </head>
+    <body class="back" style="overflow:hidden;">
+        <!-- Search Bar -->
+        <div class="nav-bar">
+            <!-- Menu slider button starts -->
+
+        <div class="menuBar" >
+            <i class="fa fa-bars bar" aria-hidden="true" onclick="slide()" style="color:#fff;"></i>
+        </div>
+
+    <!-- Menu slider button ends -->   
+        
+
+            <div class="title-demogr"></div>
+            <div class="search-box">
+                <input type="text" class="ns-bar" placeholder="&#xf002; Search"/>
+                <button class="arch-box" ><a href="#searchPage" style="color: #ababab"><i class="fa fa-2x fa-search" aria-hidden="true"></i></a></button>
+            </div>
+            
+              <!-- notification button-->
+    <div class="notification-button" onclick="notify(event)">
+        <i class="fa fa-bell" aria-hidden="true"></i>
+    </div>
+    <!-- notification button-->
+
+            
+            <div class="opt-menu dropDownClick">
+                <button class="btn" style="margin-top:5px" onclick="drop(event)"><i class="fa fa-user" aria-hidden="true"></i>&nbsp; Profile</button>                
+            </div>               
+        </div> 
+        <!-- Search bar ends -->
+        
+                <!-- Left Side Navigation var -->
+        <div id="left-can">
+    <div class="" style="margin-top:3%;">
+<!--left can Body starts-->
+		<% for(i=0;i<ques.length;i++) { %>
+        <a href="#chat" style="text-decoration:none;" data-placement="bottom" data-toggle="tooltip" title="View Query">
+        <div class="row expBox container-fluid" style="background-color:#feffff;">
+            <div class="row container-fluid">
+                <h2 class="title"><%= ques[i].email %></h2>
+            </div>
+            <div class="row container-fluid">
+                <strong><h4><%= ques[i].ques1 %></h4></strong>
+            </div>
+        </div>
+        </a>
+        <% } %>
+        
+        
+        
+<!-- left can  Body ends      -->
+    </div>
+</div>
+
+        <!-- Left Side Navigation Bar Ends -->
+        <!-- Main canvas -->
+        <div id="canvas" ng-app="mainApp">
+            <div id="mainView" ng-view></div>
+        </div>
+        <!-- Main canvas ends-->
+        
+        <!--
+    Profile Drop Down Menu Starts
+-->
+
+<div class="container-fluid">
+
+    <div class="dropDownMenu" id="drop" onclick="stable(event)">
+        <div class="dropDownArrow">
+        </div>
+        <div class="profileImg" onclick="picClick(event)">
+            <center><i class="fa fa-user user-profile-pic" aria-hidden="true"></i></center>
+            <span class="edit-profile">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </span>
+            <div class="profile-pic-change" id="profile-pic">
+                <form action="#">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="btn btn-default btn-file" style="width: 100%;margin-left: 5%;margin-top:2%; ">
+                                Browse <input type="file" style="display: none;" name="profile-pic">
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-success" style="width: 100%;margin-left: -5%;margin-top:2%;" >Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="profileRight">
+            <ul class="profile-content">
+                <li><a href="#editProfile" style="text-decoration:none; color:white;"><button class="btn btn-info profile-button" >Edit Profile</button></a></li>
+                <li><button class="btn btn-info profile-button" onclick="passChange(event)">Change Password</button></li>
+                <li><a href="/logout"><button class="btn btn-info profile-button">Logout</button></a></li>
+            </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+<!--
+    Profile Drop Down Menu Ends
+-->
+    <!-- password change form starts -->
+
+<div class="pass container-fluid" id="password" onclick="stable(event)">
+    <form class="form-group">
+        <h3>Password Change</h3>
+            <br>
+        <div class="container-fluid pass-box">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>
+                        Current Password :
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="oldPass" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>
+                        New Password :
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="r3" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>
+                        Confirm New Password :
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="text" name="r3" class="form-control">
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+
+        <div class="col-mi-6 sub">
+            <button class="btn btn-success" style="width: 30%;margin-left:35%;">Change</button>
+        </div>
+
+
+    </form>
+</div>
+
+
+    <!-- to do list starts -->
+        
+        <div class="to-do-btn" id="to-do-btn" onclick="toDo(event)" >
+<i class="fa fa-plus to-do-plus" aria-hidden="true"></i>
+
+        </div>
+        <div class="to-do" id="to-do" onclick="stable(event)">
+            <div class="tdl-holder">
+			<h2>TO DO LIST</h2>
+			<div class="tdl-content">
+				<ul></ul>
+			</div>
+			<input type="text" class="tdl-new" placeholder="Write new item and hit 'Enter'...">
+		</div>
+        </div>
+        
+        
+<!-- to do list ends -->
+        
+        <!-- Angular script to include other html pages-->
+        <script>
+        var app = angular.module("mainApp", ["ngRoute"]);
+        app.config( function ($routeProvider){
+			var id = 0;
+            $routeProvider.when("/chat",{
+                templateUrl:"chatBody?id="+id
+            }).when("/searchPage",{
+                templateUrl:"searchPage"
+            });
+            
+        });
+        </script>        
+        <script src="library/js/toDoList.js"></script>
+        <script src="library/js/profileScript.js"></script>
+        <script src="library/js/leftBar.js"></script>
+        <script src="library/js/passChangeScript.js"></script>
+        <script src="library/js/notification-script.js"></script>
+        <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<input type="hidden" id="xd" value="<%= data.cred.email %>" />
+        <input type="hidden" id="xdi" value="<%= data.did %>" />
+        <input type="hidden" id="xdf" value="<%= data.cred.firstName+" "+data.cred.lastName %>" />
+        <div class="chatBar"></div>
+    </body>
+</html>

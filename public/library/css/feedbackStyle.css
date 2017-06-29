@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body{
+    font-family: Nunito, Arail;
+}
+.feed{
+    height: 80%;
+    width: 50%;
+    position: absolute;
+    top:10%;
+    left: 25%;
+    background-color: #f2f3f4;
+    box-shadow: 0px 0px 10px 2px #c0c0c0;
+    border-radius: 2%;
+    overflow: auto;
+}
+.box{
+    border-top:1px solid #c0c0c0 ;
+    border-bottom:1px solid #c0c0c0 ;
+}

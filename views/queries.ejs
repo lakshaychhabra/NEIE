@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+        <link rel="stylesheet" href="library/css/signUp.css">
+        <link rel="stylesheet" href="library/css/textEditor.css">
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <br>
+            <div class="row Box container-fluid">
+                <div class="row headTitle container-fluid">
+                    <h2>Q: <%= ques.domain %></h2>
+                </div>
+                <br>
+                <!-- Division of User answer query -->
+                <div class="row container-fluid queryBox">
+                    <div class="row container-fluid">
+                        <div class="col-md-10">
+                            <h3><%= ques.expec %></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row container-fluid">
+                        <p><%= ques.desc %></p>
+                        <p><a href="/profile?u=<%= ques.email %>"><%= ques.email %></a></p>
+                    </div>
+                </div>
+                <!-- Division of user answer query ends -->
+                <br>
+                <% for(i=0;i<answers.length;i++) {%>
+                <div class="row container-fluid queryBox">
+                    <div class="row container-fluid">
+                        <div class="col-md-10">
+                            <h3><%= answers[i].txt%></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row container-fluid">
+                      <p><a href="/profile?u=<%= answers[i].email %>"><%= answers[i].email %></a></p>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+            <br>
+
+
+            <!--Text Editor-->
+            <form action="/df-answer" method="post">
+            <div  id="textEditor" class="container-fluid Box">
+                <!--text menu
+                <div class="textmodmenu" >
+                    <div class="textmodsub btn-group">
+                        <button class="textmod btn" id="bold"><i class="fa fa-bold"></i></button>
+                        <button class="textmod btn" id="italic"><i class="fa fa-italic"></i></button>
+                        <button class="textmod btn" id="underline"><i class="fa fa-underline"></i></button>
+                        <button class="textmod btn" id="strikeThrough"><i class="fa fa-strikethrough"></i></button>
+                    </div>
+                    <div class="textmodsub btn-group">
+                        <button class="textmod btn" id="superscript"><i class="fa fa-superscript"></i></button>
+                        <button class="textmod btn" id="subscript"><i class="fa fa-subscript"></i></button>
+                    </div>
+                    <div class="textmodsub btn-group">
+                        <button class="textmod btn" id="insertUnorderedList"><i class="fa fa-list"></i></button>
+                        <button class="textmod btn" id="insertOrderedList"><i class="fa fa-list-ol"></i></button>
+                    </div>
+                    <div class="textmodsub btn-group">
+                      <button class="textmod btn" id="justifyLeft"><i class="fa fa-align-left"></i></button>
+                      <button class="textmod btn" id="justifyCenter"><i class="fa fa-align-center"></i></button>
+                      <button class="textmod btn" id="justifyRight"><i class="fa fa-align-right"></i></button>
+                      <button class="textmod btn" id="justifyFull"><i class="fa fa-align-justify"></i></button>
+                    </div>
+                    <div class="textmodsub btn-group">
+                        <button class="textmod btn" id="indent"><i class="fa fa-indent"></i></button>
+                        <button class="textmod btn" id="outdent"><i class="fa fa-outdent"></i></button>
+                    </div>
+
+                    <div class="textmodsub btn-group">
+                        <button class="textmod btn" id="insertHorizontalRule">_</button>
+                    </div>
+
+                    <div class="textmodsub btn-group">
+                        <button class="textmodlink btn" id="createLink"><i class="fa fa-link"></i></button>
+                        <button class="textmodlink btn" id="insertImage"><i class="fa fa-image"></i></button>
+                    </div>
+                    <div class="textmodsub btn-group">
+                        <button class="textmodarg btn" id="H1">H1</button>
+                        <button class="textmodarg btn" id="H2">H2</button>
+                        <button class="textmodarg btn" id="H3">H3</button>
+                        <button class="textmodarg btn" id="P">P</button>
+                    </div>
+                    <div class="textmodsub btn-group">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="color:black;">Font<span class="caret"></span></button>
+                            <ul class="dropdown-menu dropdown-selector" id="fontName">
+                                <li>Arail</li>
+                                <li>Helvetica</li>
+                                <li>Calibri</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="textmodsub btn-group">
+                        <button id="save" class="btn"><i class="fa fa-save"></i></button>
+                    </div>
+                    <div class="textmodsub bn-group">
+                        <button class="textmod btn" id="removeFormat">clear</button>
+                    </div>
+                </div>
+                <!--uses div instead of textarea to allow editing of format-->
+                <textarea name="txt" class="texteditor" id="cms" contenteditable>
+                </textarea>
+                    </div>
+                </div>
+                <p><span id="charcount">0</span><span>/25000</span></p>
+                <div class="textcontainer" id="display">
+                </div>
+
+                <div class="row container-fluid">
+                    <input type="hidden" name="qid" value="<%= ques._id %>"/>
+                    <center><button class="btn btn-success" style="width:25%; font-size:18px;">Post</button></center>
+                </div>
+            </div>
+          </form>
+            <!--Text Editor ends-->
+            <br>
+        </div>
+        <script src="library/js/textEditor.js"></script>
+    </body>
+</html>

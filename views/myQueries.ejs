@@ -1,0 +1,48 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+        <link rel="stylesheet" href="library/css/signUp.css">
+        <!-- Scripts -->
+		
+
+    </head>
+    <body ng-app="">
+        <div class="container-fluid">
+            <br>
+            <% for(i=0;i<data.length;i++) {%>
+            <div  class='row Box container-fluid'>
+            <div class='row headTitle container-fluid'>
+                <div class='col-md-10'>
+                    <h2>Q: <%= data[i].desc %></h2>
+                </div><div class='col-md-2'>
+                <div class='btn-group' style='margin-top:5%;'>
+                    <button class='btn ' ng-click='query1=1'><i class='fa fa-chevron-down' aria-hidden='true'></i></button>
+                    <button class='btn ' ng-click='query1=0'><i class='fa fa-chevron-up' aria-hidden='true'></i></button>
+                </div>
+                <button class="btn fontSize" style='margin-top:5%;'><i class="fa fa-trash-o greenTitle" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <!-- Division of User answer query -->
+            <div ng-show='query1'>
+                <br>
+                <div class='row container-fluid queryBox'>
+                    <div class='row container-fluid'>
+                        <div class='col-md-10'>
+                            <h3><%= data[i].expec %></h3>
+                        </div>
+                    </div>
+                    <br>
+                    <div class='row container-fluid'>
+                        <p><%= data[i].domain %></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Division of user answer query ends -->
+            <br>
+        </div>
+
+        </div>
+        <% } %>
+    </body>
+</html>

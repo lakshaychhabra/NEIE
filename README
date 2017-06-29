@@ -1,0 +1,7 @@
+npm install
+
+npm start
+
+modules/forms.js is the post routes for profile/project save
+
+rest all is already working

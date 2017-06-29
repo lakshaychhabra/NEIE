@@ -1,0 +1,40 @@
+{
+  "name": "neie",
+  "version": "2.0.0",
+  "description": "National Entrepreneurship and Internship Exchange.",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadityachakravarty/NEIE.git"
+  },
+  "keywords": [
+    "National",
+    "Entrepreneurship",
+    "Internship",
+    "Exchange"
+  ],
+  "author": "Team EntX",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aadityachakravarty/NEIE/issues"
+  },
+  "homepage": "https://github.com/aadityachakravarty/NEIE#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.8",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-session": "^1.15.3",
+    "mongoose": "^4.11.0",
+    "morgan": "^1.8.2",
+    "nodemailer": "^4.0.1",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "serve-favicon": "^2.4.3",
+    "socketio": "^1.0.0"
+  }
+}

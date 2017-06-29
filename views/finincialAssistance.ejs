@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Financial Assistance</title>
+        <link rel="stylesheet" href="library/css/signUp.css">
+
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row title" style="padding-left:2%;">
+                <h1>Financial Assistance</h1>
+            </div>
+            <br>
+            <form class="form-group" action="/fin-saved" method="post">
+
+                <div class="row Box container-fluid">
+                    <label for="ques1">Have you received any external funding for the project to date? How much?</label><textarea id="ques1" class="form-control" rows="5" style="resize:none;" required name="quesf1"></textarea>
+                </div>
+                <br>
+                <div class="row Box container-fluid">
+                    <label for="ques2">How much money do you think you need to get your business off the ground? What will it be spent on?  </label><textarea id="ques2" class="form-control" rows="5" style="resize:none;"required name="quesf2"></textarea>
+                </div>
+                <br>
+                <div class="row Box container-fluid">
+                    <label for="ques3">Where/from whom do you plan to raise this funding?</label><textarea id="ques3" class="form-control" rows="5" style="resize:none;" required name="quesf3"></textarea>
+                </div>
+                <br>
+                <div class="row Box container-fluid">
+                    <label for="ques4">Have you approached any potential investors?</label><textarea id="ques4" class="form-control" rows="5" style="resize:none;" required name="quesf4"></textarea>
+                </div>
+                <br>
+                <div class="row Box container-fluid">
+                    <label for="ques5">Are you in position to invest personally in the next funding round? If yes, how much do you plan to invest?</label><textarea id="ques5" required class="form-control" rows="5" style="resize:none;" name="quesf5"></textarea>
+                </div>
+                <br>
+                <div class="row Box container-fluid">
+                    <label for="ques6">Have you completed any incubator/accelerator programmes?</label><textarea id="ques6" class="form-control" rows="5" style="resize:none;" required name="quesf6"></textarea>
+                </div>
+                <br>
+                <div class="row Box container-fluid">
+                    <label for="ques7">What are your next steps?</label><textarea  required id="ques7" class="form-control" rows="5" style="resize:none;" name="quesf7"></textarea>
+                </div>
+                <br>
+                <!-- Alert message -->
+                <div class="alert alert-info">
+                Kindly check the information before <strong>Submitting</strong>.
+                </div>
+                <br>
+                <button class="btn btn-success" style="width:60%; margin-left:20%">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>

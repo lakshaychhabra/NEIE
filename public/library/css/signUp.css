@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body{
+    font-family: Nunito, Arail;
+    font-style: 'Source Sans Pro';
+}
+input.form-control{
+    border-radius:0;
+    border:0px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    box-shadow:none;
+    transition:all 0.05s linear;
+}
+
+input:focus.form-control{
+    border-bottom: 2px solid rgba(0,0,255,0.5);
+    box-shadow:none;
+}
+
+textarea.form-control{
+    border-radius:3px;
+    border:1px solid rgba(0,0,0,0.3);
+    box-shadow:none;
+    transition:all 0.05s linear;
+}
+
+textarea:focus.form-control{
+    border: 2px solid rgba(0,0,255,0.5);
+    box-shadow:none;
+}

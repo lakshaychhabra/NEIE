@@ -1,0 +1,461 @@
+@import url(https://fonts.googleapis.com/css?family=Trocchi);
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+body{
+    font-family: Nunito, Arail;
+    overflow: hidden
+}
+
+html,body {
+	height:100%;
+}
+
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+    background-color:#F2F3F4;
+}
+/*NAVIGATION BAR*/
+.nav-bar {
+	height:7%;
+	width:100%;	
+	background:rgb(45,62,80);
+    box-shadow:  0px 4px 7px 0px rgba(0, 0, 0, 0.19);
+    z-index: 200;
+}
+/*dark patch in search bar at left side for logo*/
+.nav-bar .title-demogr {
+	display:block;
+	background:#aaa;
+	position:absolute;
+	left:10%;
+	height:7%;
+	width:100px;
+}
+
+.nav-bar .opt-menu {
+	position:absolute;
+	right:10px;
+	top:0px;
+	height:6.5%;
+	width:auto;
+}
+
+.nav-bar .opt-menu a{
+	display:inline-block;
+	width:auto;
+	height:7%;
+	padding:10px 10px 0 10px;
+	text-decoration:none;
+	font-family:'Nunito';
+	color:#adadad;
+}
+
+.nav-bar .opt-menu a:hover {
+	color:#121212;
+}
+
+.nav-bar .search-box {
+	margin-left:20%;
+    margin-bottom: 0.5%;
+    
+	width:65%;
+	height:90%;
+}
+/*NAVIGATION BAR ENDS*/
+/*SEARCH BAR*/
+.ns-bar {
+	display:block;
+	font-family:FontAwesome, Verdana;
+	width:0%;
+	height:100%;
+	border:0px;
+	padding:0px 0px 0px 0px;
+	font-size:22px;
+	border-bottom:2px solid #c0c0c0;
+	transition:0.5s;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+	float:left;
+}
+
+.ns-bar:focus {
+	outline:none;
+	width:80%;
+	padding-left:20px;
+	border-bottom:2px solid #C0C0C0;
+}
+
+.arch-box {
+	display:inline-block;
+	float:right;
+	height:100%;
+	width:10%;
+	border:none;
+	background:none;
+	color:#aaa;
+	transition:0.5s;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+}
+
+.ns-bar:focus ~ .arch-box {
+	width:0px;
+	font-size:0px;
+}
+
+.arch-box:hover {
+	color:#222;
+	cursor:pointer;
+}
+
+.arch-box:focus {
+	outline:none;
+}
+/*SEARCH BAR ENDS*/
+.back{ /*BODY BACKGROUND*/
+    background-color:#F2F3F4;
+}
+/*Left Side nav bar*/
+#left-can {
+	position:fixed;
+	top:7%;
+	left:0px;
+	width:25%;
+	height:100%;
+	z-index:5;
+    box-shadow:  2px 0px 0px 0px rgba(0, 0, 0, 0.19);
+    font-family:'Nunito', sans-serif;
+	overflow-y: auto;
+    padding-bottom: 50px;
+}
+#toolBar{
+    
+}
+ /*Main Canvas area*/
+#canvas {
+	width:73%;
+	height:90%;
+    position:fixed;
+	top:9%;
+	left:26%;
+    bottom:1%;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+	z-index: 0;
+    background-color: #FfFFFF;
+    
+}
+/*Main View*/
+#mainView{
+    width: 100%;    
+    margin:auto;
+    background-color: #FfFFFF;    
+}
+/*Font size of Side nav bar option*/
+.Size{
+    font-size: 20px;
+    font-weight:500;    
+}
+
+/*<!--  Profile Drop Down Starts -->*/
+
+
+.dropDownMenu{
+	height: 20%;
+	width: 20%;
+	background-color: rgba(192,192,192,0.5);
+	position: fixed;
+	left: 78%;
+	top: 10%;
+	border-top-left-radius: 2%;
+	border-top-right-radius: 2%;
+	box-shadow: 0px 2px 7px 0px rgba(192,192,192,0.5);
+	display: none;
+	z-index: 10;
+}
+.dropDownArrow{
+	border: 15px solid transparent;
+	height: 0px;
+	width: 0px;
+	position: relative;
+	border-bottom-color:rgba(192,192,192,0.5);
+	left: 80%;
+	top: -23%;
+}
+.profileRight{
+	height: 90%;
+	width: 50%;
+	background-color: transparent;
+	position: absolute;
+	top:7%;
+	left: 47%;
+	display: inline-block;
+}
+.profileImg{
+	height: 90%;
+	width: 40%;
+	background-color: transparent;
+	position: absolute;
+	top:5%;
+	left: 5%;
+	display: inline-block;
+	border: 1px solid #222222;
+}
+.edit-profile{
+	height: 10%;
+	width: 10%;
+	position: absolute;
+	top:1%;
+	right: 2%;
+	display: none;
+}
+
+.profileImg:hover{
+	cursor: pointer;
+}
+.profileImg:hover .edit-profile{
+	display: block;
+}
+.user-profile-pic{
+	font-size: 900%;
+}
+.profile-content{
+	list-style-type: none;
+	height: 100%;
+	width: 100%;
+	padding:0px;
+}
+.profile-content li{
+	display: block;
+	height: 33%;
+	text-align: center;
+}
+.profile-button{
+	width: 100%;
+	background-color: #ababab;
+	border: 1px solid #ababab;
+}
+.profile-pic-change{
+	position: absolute;
+	height: 32%;
+	width: 255%;
+	background-color: rgba(192,192,192,0.5);
+	left:-14%;
+	top:108%;
+	border-bottom-left-radius:3% ;
+	border-bottom-right-radius:3% ;
+	box-shadow: 0px 2px 7px 0px rgba(192,192,192,0.5);
+	z-index: 1000;
+	display: none;
+
+}
+
+
+/*
+<!--  Profile Drop Down Ends -->
+<!--  chat box starts -->
+*/
+
+/*.chatBox {
+    height: 30%;
+	width:20%;
+	background-color: #C0C0C0;
+	position: fixed;
+	z-index: 100;
+	right: 5%;
+	bottom: -24%;
+	overflow: hidden;
+	border-top-right-radius: 6%;
+	border-top-left-radius: 6%;
+	border: 1px solid #222222;
+	box-shadow: 0px 0px 5px 0px #222222;
+}
+.chatBox1{
+	height: 30%;
+	width:20%;
+	background-color: #C0C0C0;
+	position: fixed;
+	z-index: 100;
+	right: 5%;
+	bottom: -24%;
+	overflow: hidden;
+	border-top-right-radius: 6%;
+	border-top-left-radius: 6%;
+	border: 1px solid #222222;
+	box-shadow: 0px 0px 5px 0px #222222;
+}
+.live-chat{
+	display: inline-block;
+	float: left;
+	height: 90%;
+	width: 70%;
+	margin-left: 10%;
+	margin-top: 1%;
+}
+.live-chat-icon{
+	font-size: 200%;
+}
+.chatHead{
+	background-color: #C0C0C0;
+	width: 100%;
+	height: 20%;
+	position: relative;
+	border-bottom: 1px solid #222222;
+	box-shadow: 1px 0px 5px 0px  #222222;
+}
+.closeChat{
+	position: relative;
+	height: 100%;
+	width: 20%;
+	background-color: transparent;
+	float: right;
+}
+.chat-cross{
+	font-size: 30px;
+	text-align: right;
+	line-height: 40px;
+	margin-left: 30%;
+	color: darkgreen;
+}
+.chat-cross:hover{
+	cursor: pointer;
+}
+.chatFoot {
+	width: 100%;
+	height: 20%;
+	position: relative;
+	top: 60%;
+}
+.chat-submit{
+	width: 80%;
+	margin-top: 1%;
+	margin-left: 10%;
+}
+/*<!-- chat box ends -->*/
+/* myEdit LeftList */
+.leftList{
+	width: 100%;
+	}
+.leftListUl{
+	list-style-type: none;
+	display: block;
+	padding-left: 0px;
+
+	}
+.leftListUl li a{
+	display: block;
+	margin-left: 15px;
+	padding: 5px 5px 5px 5px;
+}
+.leftListUl li:hover{
+	background-color: #aaaaaa;
+}
+.list-li:hover{
+	cursor: pointer;
+}
+.down{
+	height: 20px;
+	width: 20px;
+	display: block;
+	margin: auto;
+}
+.liTag{
+	display: block;
+	text-decoration: none;
+
+}
+.drop{
+	display: none;
+	position: relative;
+	min-width: 220px;
+	background-color: #4B919F;
+	left:0px;
+	z-index: 1;
+
+}
+.drop a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+.drop-dwn:hover .drop{
+	display: block;
+}
+.menuBar{
+	height:6%;
+	width: 3.2%;
+	background-color:transparent;
+	opacity: 5;
+	position: absolute;
+	top:0.5%;
+	left:1%;
+	z-index: 5;
+    font-size:30px;
+}
+.menuBar i:hover{
+	cursor: pointer;
+}
+.bar{
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+.list-content{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
+    
+}
+.list-li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.list-content li a:hover {
+    background-color: #58ACFA;
+    color: white;
+    text-decoration: none;
+}
+.bp2{
+    display: none;
+}
+.bp1:hover .bp2{
+    background-color: aqua;
+    display: block;
+}
+/*Scroll Bar design begins*/
+::-webkit-scrollbar {
+    width: 12px;
+    
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #FAFAFA; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #FAFAFA; 
+}
+/*Scroll bar design ends*/

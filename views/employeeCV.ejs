@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <!-- Scripts -->
+       
+
+        <link rel="stylesheet" href="library/css/skill.css">
+        <script src="library/js/addWorkExpOption.js"></script>
+        <link rel="stylesheet" href="library/css/signUp.css">
+    </head>
+    <body>
+        <div class="container-fluid" ng-app="mainApp">
+          <form class="form-group" action="/profile-save" method="post">
+              <div id="basicInfo" class="container-fluid" style="border-bottom: 2px solid #c0c0c0">
+              <h3>Basic Information</h3><br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <i class="fa fa-user" aria-hidden="true"></i><label for="fName">&nbsp; First Name &nbsp;</label><input id="fName" class="form-control" type="text" required value="<%= data.cred.firstName %>" disabled/>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="lName">Last Name &nbsp;</label><input id="lName" class="form-control" required type="text" value="<%= data.cred.lastName %>" disabled/>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <i class="fa fa-envelope" aria-hidden="true"></i><label for="eMail">&nbsp; E-mail </label><input id="eMail" class="form-control" type="email" required value="<%= data.cred.email %>" disabled/>
+                  </div>
+                  <div class="col-md-6">
+                      <i class="fa fa-phone-square" aria-hidden="true"></i><label for="phone">&nbsp; Mobile </label><input id="phone" required value="<%= data.cred.mobile %>" class="form-control" type="text" numbers-only disabled/>
+                  </div>
+              </div>
+              <br>
+                  <div class="row">
+                      <div class="col-md-12">
+                          <label for="introduction">Introduction</label><textarea id="introduction" name="intro" class="form-control" rows="5" style="resize:none;"></textarea>
+                      </div>
+                  </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                      <i class="fa fa-user" aria-hidden="true"></i><label for="fatherName">&nbsp;Father Name </label><input name="fatherName" id="fatherName" class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                      <i class="fa fa-address-book" aria-hidden="true"></i>
+                      <label for="add1">&nbsp;Address line 1</label><input name="addr1" id="add1" required class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <label for="add2">Address line 2</label><input name="addr2" id="add2" class="form-control" type="text">
+                  </div>
+                  <div class="col-md-6">
+                      <label for="add3">Address line 3</label><input name="addr3" id="add3" class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              </div>
+              <div id="onlinePresence" class="container-fluid" style="border-bottom: 2px solid #c0c0c0">
+              <h3>Online Presence</h3>
+              <div class="row">
+                  <div class="col-md-6">
+                      <i class="fa fa-globe" aria-hidden="true"></i><label for="web"> &nbsp;Website </label><input name="web" id="web" class="form-control" type="text" value="<%=data.web%>">
+                  </div>
+                  <div class="col-md-6">
+                      <i class="fa fa-linkedin-square" aria-hidden="true"></i><label for="linkedIn"> &nbsp;Linked In </label><input name="lin" id="linkedIn" class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <i class="fa fa-twitter-square" aria-hidden="true"></i><label for="twitter"> &nbsp;Twitter </label><input name="twit" id="twitter" class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              </div>
+              <br>                  
+				  <h3>Skills</h3>                    
+				  <div id="dynamicSkill">                              
+				  </div>
+				  <button type="button" class="btn" onClick="addSkill('dynamicSkill');"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+            <div class="alert alert-info text-center">
+                Kindly check the information before <strong>Submitting</strong> it.
+            </div>
+            <br>
+            <button class="btn btn-success" style="margin-left:20%; width:60%">Submit</button>
+
+            </form>
+            <br>
+            <br>
+        </div>
+    </body>
+</html>

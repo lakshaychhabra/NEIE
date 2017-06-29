@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Live Expert</title>
+
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+        <link rel="stylesheet" href="library/css/signUp.css">
+    </head>
+    <body ng-app="">
+        <div class="container-fluid">
+            <div class="row" style="padding-left:2%;">
+                <h1 class="title">Live Expert Assistance</h1>
+            </div>
+            <br>
+            <form name="liveExp" class="form-group" action="/ex-req-save" method="post">
+                <div class="row Box container-fluid">
+                    <label for="ques1">Choose Domain</label>
+                        <select name="domain">
+                            <option value="Website, IT & Software">Website, IT & Software</option>
+                            <option value="Sales & Marketing">Sales & Marketing</option>
+                            <option value="Data Analysis">Data Analysis</option>
+                            <option value="Design, Media & Architecture">Design, Media & Architecture</option>
+                            <option value="Mobile Phone & Computing">Mobile Phone & Computing</option>
+                            <option value="Engineering & Science">Engineering & Science</option>
+                            <option value="Writing & Contents">Writing & Contents</option>
+                            <option value="Business, Accounting, Human Resources & Legal">Business, Accounting, Human Resources & Legal</option>
+                        </select>
+                </div>
+                <br>
+				<div class="row Box container-fluid">
+                    <label for="ques2">What is your question ?</label><textarea id="ques4" name="ques4"class="form-control" rows="5" style="resize:none;"></textarea>
+                </div>
+                <div class="row Box container-fluid">
+                    <label for="ques2">Describe your Query</label><textarea id="ques2" name="ques2" class="form-control" rows="5" style="resize:none;"></textarea>
+                </div>
+				<div class="row Box container-fluid">
+                    <label for="ques2">Describe your Expectations</label><textarea id="ques3" name="ques3" class="form-control" rows="5" style="resize:none;"></textarea>
+                </div>
+                <span ng-show="liveExp.ques2.$touched" class="redTitle">Please fill details.</span>
+                <br>
+                <button class="btn btn-success" style="width:60%; margin-left:20%">Submit</button>
+                <br>
+            </form>
+        </div>
+    </body>
+</html>

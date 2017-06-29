@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <!-- Scripts -->
+       <link rel="stylesheet" href="library/css/signUp.css">
+        <script src="library/js/addWorkExpOption.js"></script>
+    </head>
+    <body>
+      <div class="container-fluid" ng-app="mainApp">
+          <!-- Form to include multiple inputs -->
+          <form class="form-group" method="post" action="/project-save" novalidate>
+              <h3>What type of work do you require?</h3><br>
+              <div class="row">
+                  <div class="col-md-6">
+          <label for="fName">&nbsp;Type of Work &nbsp;</label><input name="tjob" id="fName" class="form-control" required type="text">
+                  </div>
+                  <div class="col-md-6">
+                      <label for="lName">Describe your Job &nbsp;</label><input name="desjob" id="lName" required class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              <br>
+              <h3>What is your Project?</h3>
+              <div class="row">
+                  <div class="col-md-6">
+                      <label for="web"> &nbsp;Project Name: </label><input name="proname" required id="web" class="form-control" type="text">
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-6">
+                      <label for="linkedIn"> &nbsp;What skills are required? </label>
+                      <br>
+                      <div id="dynamicSkill"></div>
+                      <button type="button" class="btn" onClick="addSkill('dynamicSkill');"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                      <input type="hidden" id="limit_skill" name="limit_skill" value="0" />
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                  <div class="col-md-12">
+                      <label for="twitter"> &nbsp;Describe your project </label><textarea name="despro" style="resize:none;" id="twitter" class="form-control" rows="5"></textarea>
+                  </div>
+              </div>
+              <br>
+              <h3>Cost & time for project?</h3>
+              <div class="row">
+                  <div class="col-md-6">
+                      <label for="web"> &nbsp;INR </label><input name="inr" id="web" class="form-control" required type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                  </div>
+                  <div class="col-md-6">
+                      <label for="duration">Duration (in months)</label><input name="dur" id="duration" required class="form-control" type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                  </div>
+              </div>
+              <br>
+      <!-- Alert message -->
+      <div class="alert alert-info">
+        Kindly check the information before <strong>Submitting</strong>.
+      </div>
+      <br>
+      <button class="btn btn-success" style="margin-left:48%;">Submit</button>
+      <br>
+      <br>
+          </form>
+          <!-- Form ends -->
+          <br>
+      </div>
+    </body>
+</html>

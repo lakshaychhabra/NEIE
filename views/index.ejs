@@ -1,0 +1,788 @@
+
+<!DOCTYPE html>
+<head> 
+	<!-- Styles -->
+	<link rel="stylesheet" href="global/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="global/fontawesome/css/font-awesome.min.css">	
+	<link rel="stylesheet" href="library/css/signUp.css">
+	<link rel="stylesheet" href="library/css/front5.css">
+	<!-- Scripts -->
+	<script src="global/jquery/jquery-3.2.0.min.js"></script>
+	<script src="global/bootstrap/js/bootstrap.min.js"></script>
+    <script src = "global/angular/angular.min.js"></script>    
+    <script src = "global/angular/angular-route.min.js"></script>
+	<script src = "library/js/custom_anim.js"></script>
+	<script src = "library/js/animatescroll.js"></script>
+    
+    <style>
+        ul.dropdown-menu li:hover{
+            background-color:#58ACFA;
+        }
+    </style>
+	
+   	<script>
+		$(document).ready(function(){
+			$('#Employee').show();
+			$('#active4').addClass("active");
+			$('#active4').trigger("click");
+			/*$('.<%= messages %>').trigger('click');*/
+		$("#active1").click(function(){
+			$("#active1").addClass("active");
+			$("#active2").removeClass("active");
+			$("#active3").removeClass("active");
+			$("#active7").removeClass("active");
+		});
+		$("#active2").click(function(){
+			$("#active1").removeClass("active");
+			$("#active2").addClass("active");
+			$("#active3").removeClass("active");
+			$("#active7").removeClass("active");
+		});
+		
+		$("#active3").click(function(){
+			$("#active1").removeClass("active");
+			$("#active2").removeClass("active");
+			$("#active3").addClass("active");
+			$("#active7").removeClass("active");
+		});
+		
+		$("#active7").click(function(){
+			$("#active1").removeClass("active");
+			$("#active2").removeClass("active");
+			$("#active3").removeClass("active");
+			$("#active7").addClass("active");
+		});
+		
+		$("#active4").click(function(){
+			$("#active5").removeClass("active");
+			$("#active6").removeClass("active");
+			$("#active4").addClass("active");
+		});
+		$("#active5").click(function(){
+			$("#active4").removeClass("active");
+			$("#active6").removeClass("active");
+			$("#active5").addClass("active");
+		});
+		$("#active6").click(function(){
+			$("#active4").removeClass("active");
+			$("#active5").removeClass("active");
+			$("#active6").addClass("active");
+		});
+		});
+</script>
+	
+</head>
+<body>
+	<div style="text-align:center;">
+		<!-- Navigation Bar-->
+		<div class="nav-bar">
+			<div class="logo"></div>
+			<div class="nav-bar-sign">
+				<a class="" data-toggle="modal" data-target="#myModal2" ><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
+			
+			</div>
+		</div>
+		<!-- Navigation Bar End-->
+		<div class="fixed-back">
+		<br>
+			<div class="tagline">
+				<p>National Entrepreneurship<br>Internship Exchange</p>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div style="color:rgba(45,62,80,0.8); transition:1s linear;">
+				<p style=" font-weight: bold; font-size: 20px;">Supported by<br>Ministry of Skill Development & Entrepreneurship</p>
+			</div>
+			<br>
+			<br>
+			<br>
+			<div>
+				<a class="button" data-toggle="modal" data-target="#entrepreneurSignUp" style=" font-weight: bold; font-size: 20px;">Sign Up</a>
+			</div>
+			<br>
+			<br>
+			<a style="color:black;" onclick="$('#front-slider').animatescroll({padding:60});">
+			<div class="scroll-down" id="scroll-down">
+				<p class="fa fa-chevron-down">
+				</p>
+			</div>
+			</a>
+		</div>
+		
+		
+		<div style="position:absolute; top:100%;background:white; width: 100%;" id="front-slider">
+		  <div style="width: 100%;">
+			<div class="content-row" style="text-align:left;">
+			<div style="width:100%;margin:0 auto; ">
+			<!-- home page carousal --> <!-- changed whole stuff -->
+			
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+					<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+					<li data-target="#myCarousel" data-slide-to="4"></li>
+					<li data-target="#myCarousel" data-slide-to="5"></li>
+					<li data-target="#myCarousel" data-slide-to="6"></li>
+					<li data-target="#myCarousel" data-slide-to="7"></li>
+					</ol>
+		
+    <!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+					<img src="" alt="" id="one"/>
+					<div class="carousel-caption">
+						<p>Internship, Externship & Field Experiences</p>
+					</div>
+					</div>
+		
+					<div class="item">
+						<img src="" alt="" id="two"/>
+						<div class="carousel-caption">
+						<p>Get Internship on Entrepreneurship</p>
+					</div>
+					</div>
+				
+				<div class="item">
+					<img src="" alt="" id="three"/>
+					<div class="carousel-caption">
+						<p>Determine the Legal Structure of your Business</p>
+					</div>
+				</div>
+	
+				<div class="item">
+					<img src="" alt="" id="four"/>
+					<div class="carousel-caption">
+						<p>Finance your Business</p>
+					</div>
+				</div>
+	  
+				<div class="item">
+					<img src="" alt="" id="five"/>
+					<div class="carousel-caption">
+						<p>Get Business Assistance & Training</p>
+					</div>
+				</div>
+		
+				<div class="item">
+					<img src="" alt="" id="six"/>
+					<div class="carousel-caption">
+						<p>Get Expert Advice</p>
+					</div>
+				</div>
+				
+				<div class="item">
+					<img src="" alt="" id="seven"/>
+					<div class="carousel-caption">
+						<p>Get Industry Insights and Exposure</p>
+					</div>
+				</div>
+				
+				<div class="item">
+					<img src="" alt="" id="eight"/>
+					<div class="carousel-caption">
+						<p>Got Ideas! Build a Startup Around it</p>
+					</div>
+				</div>
+				
+			</div>
+
+    <!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+				</a>
+			</div>
+		
+			</div>
+		</div>
+	  </div>
+    
+          <div class="front-footer">
+		  <br>
+            <h2>About Us</h2>
+              <br>
+            <p>The website will provide a common platform to Entrepreneur as well as Interns.
+This website will help entrepreneur to solve all business related queries. The website will enlist the experts of different fields from various institutions and organizations. The qualifications & experience records of expert will be enlisted.
+The website will also provide the cost according to time period. If entrepreneur’s requirements are not fulfilled at the time then website will store the queries in database. After finding appropriate expert website will trigger a notification to them for the solution.
+Website will also provide the record and profit of different businesses according to their size in that domain.
+</p>
+          </div>
+		</div>
+	
+	</div>	
+	
+			
+		
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+		
+			
+				
+		<!-- Login Modal-->
+				<div class="modal fade" id="myModal2" role="dialog" style="text-align:initial;">
+                                    <div class="modal-dialog">
+                                        <!-- Modal content-->
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                <h4 class="modal-title">Log-in</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <button class="btn btn-block tren" id="active4" onclick="$('#Entre').show();$('#Emp').hide();$('#Exp').hide();">Entrepreneur</button>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <button class="btn btn-block trem" id="active5" onclick="$('#Emp').show();$('#Entre').hide();$('#Exp').hide();">Intern</button>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <button class="btn btn-block trem" id="active6" onclick="$('#Exp').show();$('#Entre').hide();$('#Emp').hide();">Expert</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row content">         
+                                                        <!-- Entrepreneur login -->
+                                                        <div id="Entre" style="display:none;" class="form-group container-fluid">
+                                                            <form name="login"  method="post" action="/login">
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="email">E-mail</label><input id="email" name="email" type="email" class="form-control" placeholder="e-mail" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="pwd">Password</label><input id="pwd" name="password" type="password" placeholder="Password" class="form-control" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <button class="btn btn-block btn-success"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                                                                <br>
+                                                                <a href="#" data-toggle="modal" data-target="#myModal" style="float:right;" >Forgot Password</a>
+                                                            </form>
+                                                        </div>
+                                                        <!-- Entrepreneur login ends -->
+                                                        
+                                                        <!-- Employee login -->
+                                                        <div id="Emp" style="display:none;" class="form-group container-fluid">
+                                                            <form name="login" method="post" action="/login">
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="email">E-mail</label><input id="email" name="email" type="email" class="form-control" placeholder="e-mail" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="pwd">Password</label><input id="pwd" name="password" type="password" placeholder="Password" class="form-control" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <button class="btn btn-block btn-success"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                                                                <br>
+                                                                <a href="#" data-toggle="modal" data-target="#myModal" style="float:right;" >Forgot Password</a>
+                                                            </form>
+                                                        </div>
+                                                        <!-- Employee login Ends -->
+                                                        
+                                                        <!-- Expert Login -->
+                                                            <div id="Exp" style="display:none;" class="form-group container-fluid">
+                                                            <form name="login" method="post" action="/login">
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="email">E-mail</label><input id="email" name="email" type="email" class="form-control" placeholder="e-mail" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <div class="row">
+                                                                    <label for="pwd">Password</label><input id="pwd" name="password" type="password" placeholder="Password" class="form-control" required>                    
+                                                                </div>
+                                                                <br>
+                                                                <button class="btn btn-block btn-success"><span class="glyphicon glyphicon-log-in"></span> Login</button>
+                                                                <br>
+                                                                <a href="#" data-toggle="modal" data-target="#myModal" style="float:right;" >Forgot Password</a>
+                                                            </form>
+                                                        </div>
+                
+                                                        
+                                                        <!-- Expert Login ends -->
+                                                        
+                                                        <div>
+                                                                <!-- Modal -->
+                                                                <div class="modal fade" id="myModal" role="dialog">
+                                                                    <div class="modal-dialog">
+                                                                        <!-- Modal content-->
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                                <h4 class="modal-title">Forgot Password?</h4>
+                                                                            </div>
+                                                                            <div class="modal-body form-group" ng-app="mainApp" ng-controller="blabla">
+                                                                                <form>
+                                                                                    <label for="forgetEmail">Enter E-mail </label><input id="forgetEmail" type="email" class="form-control" required><br>
+                                                                                    <button class="btn btn-success" ng-click="message()" data-dismiss="modal">Submit</button>
+                                                                                    <script>
+                                                                                        var app = angular.module("mainApp", []);
+                                                                                        app.controller("blabla",function($scope,$window){
+                                                                                            $scope.message= function(){
+                                                                                                $window.alert("An e-mail has been sent to your account. Please check the mail to proceed for log-in.");
+                                                                                            }
+                                                                                        });
+                                                                                    </script>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                                    
+                                                        </div>
+                                                    </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+				
+		<!-- Login Modal end-->
+						
+				
+		<!-- Sign up Modal-->
+		<!--Modal for ALL signup options-->
+			<div class="modal fade" id="entrepreneurSignUp" role="dialog" style="text-align:initial;">
+				<div class="modal-dialog" style="overflow-y:auto;height:90%; width:70%;">
+					<!-- Modal content-->
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<br>
+							<div class="row">
+								<div class="col-md-4">
+									<button class="btn btn-block active" id="active1" onclick="$('#Employee').show();$('#individualSignUp').hide();$('#Expert').hide();" name="empl">Intern</button>
+								</div>
+                                <div class="col-md-4" >
+									<button class="btn btn-block" id="active2" onclick="$('#individualSignUp').show();$('#Employee').hide();$('#Expert').hide();" name="roo">Entrepreneur</button>
+								</div>
+								
+                                <div class="col-md-4">
+									<button class="btn btn-block" id="active7" onclick="$('#Expert').show();$('#individualSignUp').hide();$('#Employee').hide();" name="organ">Expert</button>
+								</div>
+							</div>
+						</div>
+						<div class="modal-body">
+                            
+                            <!-- Modal for expert signup -->
+                            
+                            <div id="Expert" style="display:none">
+                            <div class="form-group container-fluid">
+							<form name="register" method="post" action="/register">
+                                <br>
+								<div class="row">
+									<div class="col-md-6">
+										<label for="fName"><i class="fa fa-user" aria-hidden="true"></i> First Name &nbsp;</label><input placeholder="Your First Name (max. 30 alphabets)" id="fName" name="fName" class="form-control" type="text"  required>
+									</div>
+									<div class="col-md-6">
+										<label for="lName">Last Name &nbsp;</label>
+                                        <input id="lName" class="form-control" type="text" placeholder="Your Last Name (max. 30 alphabets)" name="lName" required>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-6">
+										<label for="eMail"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail </label><input name="eMail" id="eMail" class="form-control" placeholder="eg. abx@xyz.com" name="eMail" type="email" required>
+									</div>
+									<div class="col-md-6">
+										<label for="domain"><i class="fa fa-globe" aria-hidden="true"></i> Domain </label>
+                                        <div class="dropdown">
+                        <select name="domain">
+                            <option value="Website, IT & Software">Website, IT & Software</option>
+                            <option value="Sales & Marketing">Sales & Marketing</option>
+                            <option value="Data Analysis">Data Analysis</option>
+                            <option value="Design, Media & Architecture">Design, Media & Architecture</option>
+                            <option value="Mobile Phone & Computing">Mobile Phone & Computing</option>
+                            <option value="Engineering & Science">Engineering & Science</option>
+                            <option value="Writing & Contents">Writing & Contents</option>
+                            <option value="Business, Accounting, Human Resources & Legal">Business, Accounting, Human Resources & Legal</option>
+                        </select>
+                    </div>
+									</div>
+								</div>
+								<br>
+                               
+								<div class="row">
+									<div class="col-md-12">
+										<label for="creatpwd">Password</label><input id="creatpwd" class="form-control" type="password" placeholder="*****" name="createpwd">
+										<span class="text-danger" ng-show="register.createpassword.$dirty && register.createpassword.$invalid"></span>           
+									</div>                    
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-12">
+										<label for="confrmpwd">Confirm Password</label><input id="confrmpwd" class="form-control" type="password" placeholder="*****" name="confirmpwd">
+										<span class="text-danger" ng-show="register.confrmpassword.$dirty && register.confrmpassword.$invalid"></span>           
+									</div>                    
+								</div>
+								<br>
+								<div class="row" >
+									<div class="col-md-12">
+										<label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i> Mobile </label><input name="phone" id="phone" class="form-control"  placeholder="eg. 9876543210" name="phone" type="text" min="10" maxlength=10  required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+									</div>
+								</div>
+								<br>                
+								<br>
+								<input type="hidden" name="typ" value="ex" />
+								<button class="btn btn-success btn-block" style="width:60%; margin-left:20%"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</button>
+                            </form>    
+						</div>
+                            
+                            </div>
+                            
+                            
+                            
+                            
+                            <!-- modal for expert signup ends -->
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            <!-- Modal for employee Signup          -->
+                            
+                            <div id="Employee" style="display:none">
+                            <div class="form-group container-fluid">
+							<form name="register" method="post" action="/register">
+                               	<div class="row">
+									<div class="col-md-6">
+										<label for="fName"><i class="fa fa-user" aria-hidden="true"></i> First Name &nbsp;</label><input placeholder="Your First Name (max. 30 alphabets)" id="fName" name="fName" class="form-control" type="text" required>
+									</div>
+									<div class="col-md-6">
+										<label for="lName">Last Name &nbsp;</label>
+                                        <input id="lName" class="form-control" type="text" placeholder="Your Last Name (max. 30 alphabets)" name="lName" required>
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-6">
+										<label for="eMail"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail </label><input id="eMail" class="form-control" placeholder="eg. abx@xyz.com" name="eMail" type="email" required>
+									</div>
+									<div class="col-md-6">
+										<label for="web"><i class="fa fa-globe" aria-hidden="true"></i> Website </label><input id="web" class="form-control" placeholder="eg. www.example.com" name="web" type="text">
+									</div>
+								</div>
+								<br>
+                               
+								<div class="row">
+									<div class="col-md-12">
+										<label for="creatpwd">Password</label><input name="createpwd" id="creatpwd" class="form-control" type="password" placeholder="*****" name="creatpwd">
+										<span class="text-danger" ng-show="register.createpassword.$dirty && register.createpassword.$invalid"></span>           
+									</div>                    
+								</div>
+								<br>
+								<div class="row">
+									<div class="col-md-12">
+										<label for="confrmpwd">Confirm Password</label><input name="confirmpwd" id="confrmpwd" class="form-control" type="password" placeholder="*****" name="confrmpwd">
+										<span class="text-danger" ng-show="register.confrmpassword.$dirty && register.confrmpassword.$invalid"></span>           
+									</div>                    
+								</div>
+								<br>
+								<div class="row" >
+									<div class="col-md-12">
+										<label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i> Mobile </label><input name="phone" id="phone" class="form-control"  placeholder="eg. 9876543210" name="phone" type="text" min="10" maxlength=10  required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+									</div>
+								</div>
+								<br>                
+								<br>
+								<input type="hidden" name="typ" value="em" />
+								<button class="btn btn-success btn-block" style="width:60%; margin-left:20%"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</button>
+                               
+							</form>    
+						</div>
+                            
+                            </div>
+                            
+                            
+                            
+                            <!-- Modal for employee Signup  ends    -->
+                            
+                            
+                            
+                            
+                            
+                            
+							<!-- Modal for individual entrepreneur signup -->
+							<div id="individualSignUp" style="display:none;">
+							
+				
+							<!-- Modal content-->
+							<div>
+								<div >
+									<div class="form-group container-fluid">
+										<form name="register" method="post" action="/register">
+                                            <div class="row">
+												<div class="col-md-6">
+													<label for="fName"><i class="fa fa-user" aria-hidden="true"></i> First Name &nbsp;</label><input name="fName" id="fName" class="form-control" type="text" placeholder="Your First Name (max. 30 alphabets)">
+												</div>
+												<div class="col-md-6">
+													<label for="lName">Last Name &nbsp;</label><input name="lName" id="lName" class="form-control" type="text" placeholder="Your Last Name (max. 30 alphabets)">
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="fName"><i class="fa fa-building" aria-hidden="true"></i> Organization Name &nbsp;</label><input name="oName" id="fName" class="form-control" type="text" placeholder="Your Organization Name">
+												</div>								
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-6">
+													<label for="eMail"><i class="fa fa-envelope" aria-hidden="true"></i> E-mail </label><input name="eMail" id="eMail" class="form-control" type="email" placeholder="eg. abx@xyz.com">
+												</div>
+												<div class="col-md-6">
+													<label for="web"><i class="fa fa-globe" aria-hidden="true"></i> Website </label><input name="web" id="web" class="form-control" type="text" placeholder="eg. www.example.com">
+												</div>
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="creatpwd">Password</label><input name="createpwd" id="creatpwd" class="form-control" type="password" placeholder="*****">
+													<span class="text-danger" ng-show="register.createpassword.$dirty && register.createpassword.$invalid"></span>           
+												</div>                    
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+													<label for="confrmpwd">Confirm Password</label><input name="confirmpwd" id="confrmpwd" class="form-control" type="password" placeholder="*****">
+													<span class="text-danger" ng-show="register.confrmpassword.$dirty && register.confrmpassword.$invalid"></span>           
+												</div>                    
+											</div>
+											<br>
+											<div class="row">
+												<div class="col-md-12">
+												<label for="phone"><i class="fa fa-mobile" aria-hidden="true"></i> Mobile </label><input name="phone" id="phone" class="form-control" type="text" maxlength=10  required onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder="eg. 9876543210">
+												</div>
+											</div>
+											<br>                
+											
+											<input type="hidden" name="typ" value="en" />
+											<input type="hidden" name="man" value="self" />
+											<button class="btn btn-success btn-block" style="width:60%; margin-left:20%"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</button> 
+										</form>    
+									</div>
+        						</div>
+							</div>
+                            </div>    
+						</div>
+						<!--Sign-Up Individual code ends -->
+						    
+					</div>
+				</div>
+			</div>
+		<!--Modal for Entrepreneur signup options ends-->
+
+<div class="container-fluid">
+		<div style="display:none;">
+            <button class="btn ss" data-toggle="modal" data-target="#signUpSuccessful">SignUpSuccessful</button>
+            <button class="btn pw" data-toggle="modal" data-target="#emailPasswordWrong">emailPasswordWrong</button>
+            <button class="btn ue" data-toggle="modal" data-target="#userExist">userExist</button>
+			<button class="btn pm" data-toggle="modal" data-target="#passDontMatch">PassDontMatch</button>
+			<button class="btn fe" data-toggle="modal" data-target="#fieldsEmpty">FieldsEmpty</button>
+		</div>
+			<!-- Modal Starts    -->
+            <div class="modal fade" id="signUpSuccessful" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Sign Up successful!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="fieldsEmpty" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Fields are Empty!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="passDontMatch" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Passwords do not match !</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="emailPasswordWrong" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="redTitle"><strong>E-mail</strong> or <strong>Password</strong> is incorrect.</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="userExist" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="redTitle">User already exists.</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<div class="container-fluid">
+		<div style="display:none;">
+            <button class="btn" data-toggle="modal" data-target="#projectPosted">projectPosted</button>
+            <button class="btn" data-toggle="modal" data-target="#changesSaved">changesSaved</button>
+            <button class="btn" data-toggle="modal" data-target="#jobPosted">jobPosted</button>
+            <button class="btn" data-toggle="modal" data-target="#delete">delete</button>
+            <button class="btn" data-toggle="modal" data-target="#queryPosted">queryPosted</button>
+		</div>
+			<!-- Modal Starts    -->
+            <div class="modal fade" id="queryPosted" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Query posted!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="projectPosted" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Project posted!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="changesSaved" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Changes saved successfully!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="jobPosted" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body">
+                            <center><h1 class="greenTitle">Job posted!</h1></center>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+<!-- Modal Starts    -->
+            <div class="modal fade" id="delete" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+
+                        <div class="modal-body container-fluid">
+                            <form>
+                                <div class="row container-fluid">
+                                    <center><h2>Are you sure?</h2></center>
+                                </div>
+                                <div class="row container-fluid">
+                                    <div class="col-md-6">
+                                        <button class="btn btn-block btn-success fontSize">Delete</button>
+                                    </div><div class="col-md-6">
+                                        <button class="btn btn-block btn-danger fontSize">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+<!--            Modal ends-->
+        </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+        <link rel="stylesheet" href="library/css/signUp.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <br>
+            <form class="form-group" action="/query-post" method="post">
+                <div class="row Box container-fluid">
+                    <div class="row container-fluid headTitle">
+                        <h2>Raise a Query</h2>
+                    </div>
+                    <br>
+                    <div class="row container-fluid">
+                        <label for="ques1">Domain</label><input name="domain" id="ques1" class="form-control" type="text" placeholder="Ex. IT, Finance, Marketing, etc">
+                    </div>
+                    <br>
+                    <div class="row container-fluid">
+                        <label for="ques2">Describe your Query</label><textarea required name="desc" id="ques2" class="form-control" rows="5" style="resize:none;"></textarea>
+                    </div>
+                    <br>
+                    <div class="row container-fluid">
+                        <label for="ques3">What do you Expect ?</label><textarea name="expec" id="ques3" required class="form-control" rows="5" style="resize:none;"></textarea>
+                    </div>
+                    <br>
+                    <button class="btn btn-success" style="width:60%; margin-left:20%">Submit</button>
+                </div>
+            </form>
+            <br>
+        </div>
+    </body>
+</html>

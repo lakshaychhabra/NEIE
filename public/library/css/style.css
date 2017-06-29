@@ -1,0 +1,336 @@
+@import url(https://fonts.googleapis.com/css?family=Trocchi);
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=ABeeZee');
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+body{
+    font-family: Nunito, Arail;
+}
+
+html,body {
+	height:100%;
+}
+
+body {
+	margin:0;
+	padding:0;
+	width:100%;
+    font-family: Nonito;
+}
+
+#canvas {
+	height:100%;
+	width:100%;
+}
+
+.section {
+	display:block;
+	height:100%;
+	width:100%;
+	border-bottom:1px solid #aaa;        
+}
+/*NAVIGATION BAR*/
+.nav-bar {
+	height:7%;
+	width:100%;
+	
+	background:#FFF;
+    box-shadow:  0px 4px 7px 0px rgba(0, 0, 0, 0.19);
+}
+
+.nav-bar .title-demogr {
+	display:block;
+	background:#aaa;
+	position:absolute;
+	left:10%;
+	height:7%;
+	width:100px;
+}
+
+.nav-bar .opt-menu {
+	position:absolute;
+	right:10px;
+	top:0px;
+	height:6.5%;
+	width:auto;
+}
+
+.nav-bar .opt-menu a{
+	display:inline-block;
+	width:auto;
+	height:7%;
+	padding:10px 10px 0 10px;
+	text-decoration:none;
+	font-family:"Nunito";
+	color:#adadad;
+}
+
+.nav-bar .opt-menu a:hover {
+	color:#121212;
+}
+
+.nav-bar .search-box {
+	margin-left:20%;
+    margin-bottom: 0.5%;
+    
+	width:65%;
+	height:90%;
+}
+/*NAVIGATION BAR ENDS*/
+/*SEARCH BAR*/
+.ns-bar {
+	display:block;
+	font-family:FontAwesome, Verdana;
+	width:0%;
+	height:100%;
+	border:0px;
+	padding:0px 0px 0px 0px;
+	font-size:22px;
+	border-bottom:2px solid #c0c0c0;
+	transition:0.5s;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+	float:left;
+}
+
+.ns-bar:focus {
+	outline:none;
+	width:80%;
+	padding-left:20px;
+	border-bottom:2px solid #C0C0C0;
+}
+
+.arch-box {
+	display:inline-block;
+	float:right;
+	height:100%;
+	width:10%;
+	border:none;
+	background:none;
+	color:#aaa;
+	transition:0.5s;
+	-webkit-transition:0.5s;
+	-moz-transition:0.5s;
+}
+
+.ns-bar:focus ~ .arch-box {
+	width:0px;
+	font-size:0px;
+}
+
+.arch-box:hover {
+	color:#222;
+	cursor:pointer;
+}
+
+.arch-box:focus {
+	outline:none;
+}
+/*SEARCH BAR ENDS*/
+.back{ /*BODY BACKGROUND*/
+    background-color:#F2F3F4;
+}
+/*SECOND SECTION IMAGE 1 DIVISION*/
+#hireImg{
+    height: 35%;
+    width: 50%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid dimgrey;
+}
+/*ALL SECTION IMAGES*/
+.image{
+    height: 100%;
+    width: 100%;
+}
+/*MODAL*/
+.modal-header{
+   background-color:#F2F3F4;
+}
+.modal-body{
+    background-color: #F2F3F4;
+}
+input{
+background-color:#Feffff !important
+}
+/* mods */
+.mast-elem {
+	width:98%;
+    margin-left: 1%;
+	height:45%;
+	text-align:center;
+    margin-bottom:2%;
+    box-shadow:  0px 0px 5px 3px rgba(0, 0, 0, 0.19);
+}
+.mast-elem .m-left {
+	display:block;
+	width:50%;
+	height:100%;
+	float:left;
+    background:#34675c;
+}
+.mast-elem .m-right {
+	display:block;
+	width:50%;
+	height:100%;
+	float:left;
+	background:#b3c100;
+}
+.mast-elem .mast-fac-buffer {
+	height:10%;
+	width:100%;
+}
+.mast-elem .m-left p,.mast-elem .m-right p{
+	font-family:'Source Sans Pro', sans-serif;
+	font-size:48px;
+	color:#eee;
+	margin-top:calc(22% - 50px);
+}
+/* column img */
+.mast-elem .ml-1 {background:url('../img/2.jpg') no-repeat;background-size:cover;}
+.mast-elem .rl-2 {background:url('../img/1.jpg') no-repeat;background-size:cover;}
+.mast-elem .ml-3 {background:url('../img/3.jpg') no-repeat;background-size:cover;}
+.mast-elem .rl-4 {background:url('../img/5.jpg') no-repeat;background-size:cover;}
+.mast-elem .ml-5 {background:url('../img/4.jpg') no-repeat;background-size:cover;}
+.mast-elem .rl-6 {background:url('../img/6.jpg') no-repeat;background-size:cover;}
+.mast-elem .ml-7 {background:url('../img/7.jpg') no-repeat;background-size:cover;}
+.mast-elem .rl-8 {background:url('../img/8.jpg') no-repeat;background-size:cover;}
+/* log */
+.mast-elem-log {
+	width:98%;
+    margin-left: 1%;
+	height:30%;
+    box-shadow:  0px 0px 7px 5px rgba(0, 0, 0, 0.19);
+}
+.mast-elem-log .m-left {
+	display:block;
+	width:50%;
+	height:100%;
+	float:left;background:#b3c100;
+}
+.mast-elem-log .m-right {
+	display:block;
+	width:50%;
+	height:100%;
+	float:left;
+	background:#34675c;
+}
+.mast-elem-log .ml-lo,.mast-elem-log .ml-ro {
+	width:60%;
+	height:80%;
+	margin:2.5% auto;
+	background:rgba(255,255,255,0.4);
+	border-radius:10px;
+	text-align:center;
+}
+.mast-elem-log .ml-lo p,.mast-elem-log .ml-ro p{
+	text-align:center;
+	font-size:36px;
+	font-family:'Source Sans Pro', sans-serif;
+}
+.headSize{
+    font-size: 20px;
+    font-weight:500;
+    font-style: italic;
+}
+
+/*Main pic typed.js*/
+#grad1, #grad2, #grad3, #grad4, #grad5{
+	
+}
+#grad{
+	background:url('../img/cover-2.jpg');
+	height:93%;
+	width:100%; 
+	font-family:ABeeZee; 
+	font-size:50px; 
+	padding-top:50px;
+	overflow:hidden;
+	text-align:left;
+}
+
+#typed1{
+	padding-left:10%;
+	cursor:default;
+}
+
+#typed2, #typed3, #typed4, #typed5{
+	padding-left:7%;
+	font-size:30px;
+	
+}
+/*Main pic typed.js ends*/
+.scroll-btn{
+	border-radius:50%;
+	background:black;
+    opacity: 0.5;
+	color:white;
+	position:fixed;
+	top:85%;
+	left:90%;
+	height:60px;
+	width:60px;
+	transition:box-shadow 0.5s ease;
+	transition:background 0.5s ease;
+	cursor:pointer;	
+	font-size:50px;
+	
+	text-align:center;
+	padding-top:0.6%
+}
+
+.scroll-btn:hover{
+		animation: scroll-btn 1s infinite;
+		border:0.5px solid black;
+    opacity: 0.7;
+		background:rgb(0, 0, 0);
+		
+}
+@keyframes scroll-btn{
+	0%{}
+	50%{height:63px;width:63px; left:89.92%;}
+	100%{height:60px; width:60px;}
+}
+-webkit-@keyframes scroll-btn{
+	0%{}
+	50%{height:63px;width:63px; left:89.92%;}
+	100%{height:60px; width:60px;}
+}
+-moz-@keyframes scroll-btn{
+	0%{}
+	50%{height:63px;width:63px; left:89.92%;}
+	100%{height:60px; width:60px;}
+}
+-o-@keyframes scroll-btn{
+	0%{}
+	50%{height:63px;width:63px;}
+	100%{height:60px; width:60px;}
+}
+/*Scroll Bar design begins*/
+::-webkit-scrollbar {
+    width: 12px;
+    
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #FAFAFA; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #FAFAFA; 
+}
+/*Scroll bar design ends*/
+a{
+    text-decoration: none;
+}

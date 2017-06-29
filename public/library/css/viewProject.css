@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body{
+    font-family: Nunito, Arail;
+}
+body{
+	margin:0;
+	height:100%;
+	width:100%;
+	Padding:0;
+}
+p{
+	padding-left:16px;
+}
+div{
+	
+	font-family:verdana,Arial,Helvetica;
+}
+.container{
+	padding:16px 4px;
+	margin:12px 12px;
+	//border:1px solid #c0c0c0;
+	box-shadow:5px 5px 7px 0px rgba(0,0,0,0.19);
+	width:97%;
+	max-height:165px;
+	overflow:hidden;
+	float:left;
+    background:#fff;
+}
+
+
+.container a{
+	text-decoration:none;
+	font-size:180%;
+	padding:4px 0px;	
+    //transition: 1s linear;
+}
+.container a:hover{
+    //color:black;
+    
+}
+.container-border{
+    border-bottom:1px solid #c0c0c0;
+    width:98%;
+    margin:0 10px;
+    margin-right: 10px;
+}
+.wrap-p p {
+     width: 80%;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+}

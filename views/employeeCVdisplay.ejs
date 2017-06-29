@@ -1,0 +1,165 @@
+<html id="pdf">
+    <head>
+        
+<!-- Local scripts        -->
+        <link rel="stylesheet" href="library/css/employeeCVdisplay.css">
+        <style>
+            p{
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+      <div class="container-fluid">
+          <br>
+          <div class="row Box container-fluid">
+              <div class="col-md-9">
+                  <div class="row">
+                      <h1><%= data.cred.firstName %> <%= data.cred.lastName %></h1>
+                  </div>
+					<div class="row">
+                      <h2 class="title">Tier</h2>
+                      <p>7</p>
+					</div>                 
+				 <div class="row">
+                      <h2 class="title">Introduction</h2>
+                      <p><%= data.prof.intro %></p>
+                  </div>
+              </div>
+              <div class="col-md-3"><img src="library/img/ProfilePictureMain.png" style="width:100%s;height:30%;border:5px solid #088A68"></div>
+          </div>
+          <br>
+          <div class="row Box container-fluid">
+              <h2 class="title">Basic Information</h2>
+              <div class="row">
+                  <div class="col-md-6">
+                      <p>
+                          <label>E-mail: </label> <%= data.prof.email %>
+                          <br>
+                          <label>Website:   </label> <%= data.cred.webs %>
+                          <br>
+                          <label>Twitter: </label> <%= data.prof.twit %>
+                      </p>
+                  </div>
+                  <div class="col-md-6">
+                      <p>
+                      <label>Mobile: </label> <%= data.cred.mobile %>
+                      <br>
+                      <label>Linked In: </label> <%= data.prof.lin %>
+                      </p>
+                  </div>
+              </div>
+              <div class="row container-fluid">
+                  <p>
+                  <label>Father Name:</label> <%= data.prof.fatName %>
+                  </p>
+              </div>
+              <div class="row container-fluid">
+                  <p><label>Address:</label>
+                  <%= data.prof.addr %></p>
+              </div>
+          </div>
+          <br>
+          <div class="row Box container-fluid">
+              <h2 class="title">Experience</h2>
+              <% for(i=0;i<data.prof.wex.length;i++) {%>
+              <div class="row container-fluid">
+                  <div class="col-md-6">
+                      <p>
+                      <label>Title:</label> <%= data.prof.wex[i].jtitle %>
+                      <br>
+                      <label>Organization:</label> <%= data.prof.wex[i].company %>
+                      </p>
+                  </div>
+                  <div class="col-md-6">
+                      <p>
+                      <label>Date from:</label> <%= data.prof.wex[i].dfrom %>
+                      <br>
+                      <label>Date to:</label> <%= data.prof.wex[i].dto %>
+                      </p>
+                  </div>
+              </div>
+              <%}%>
+          </div>
+          <br>
+          <div class="row Box container-fluid">
+              <h2 class="title">Skill</h2>
+              <div>
+
+                  <ul>
+                      <% for(i=0;i<data.prof.skills.length;i++) {%>
+                      <li><p><%= data.prof.skills[i].name %></p></li>
+                      <%}%>
+                  </ul>
+
+              </div>
+          </div>
+          <br>
+          <div class="row Box container-fluid">
+              <h2 class="title">Education</h2>
+              <% for(i=0;i<data.prof.edu.length;i++) {%>
+              <div>
+                  <p>
+                  <label>Course:</label> <%= data.prof.edu[i].course %>
+                  <br>
+                  <label>Institution:</label> <%= data.prof.edu[i].inst %>
+                  <br>
+                  <label>Grades:</label> <%= data.prof.edu[i].score %>
+                  <br>
+                  <label>Passed out:</label> <%= data.prof.edu[i].pass %>
+                  </p>
+              </div>
+              <%}%>
+          </div>
+<!--
+          <br>
+          <div class="row Box container-fluid">
+              <h2 class="title">Languages</h2>
+              <div>
+                  <ul>
+                      <p>
+                      <% for(i=0;i<data.prof.langs.length;i++) {%>
+                      <li><p><%= data.prof.langs[i].name %></p></li>
+                      <%}%>
+                      </p>
+                  </ul>
+              </div>
+          </div>
+-->
+<!--
+          <br>
+          <div class="row Box container-fluid">
+              <h2 class="title">Certificates</h2>
+              <div>
+                  <ul>
+                      <p>
+                      <% for(i=0;i<data.prof.certs.length;i++) {%>
+                      <li><p><%= data.prof.certs[i].name+"-"+data.prof.certs[i].dfrom %></p></li>
+                      <%}%>
+                      </p>
+                  </ul>
+              </div>
+          </div>
+          <br>
+          <div class="row Box container-fluid">
+              <h2 class="title">References</h2>
+              <div class="row">
+                  <div class="col-md-6">
+                      <p>
+                      <% for(i=0;i<data.prof.refers.length;i++) {%>
+                      <label>Name:</label> <%= data.prof.refers[i].name %><br>
+                      <label>Job profile:</label> <%= data.prof.refers[i].profile %><br>
+                      <label>Organization:</label> <%= data.prof.refers[i].org %><br>
+                      <label>Mobile:</label> <%= data.prof.refers[i].mob %><br>
+                      <%}%>
+                      </p>
+                  </div>
+                  <div class="col-md-6">
+                  </div>
+              </div>
+          </div>
+          <br>
+-->
+      </div>
+    </body>
+</html>
