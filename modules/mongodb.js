@@ -1,9 +1,9 @@
 var mongoose = require('mongoose'); //MongoConnection
 /* Mongo Connectivity */
-mongoose.connect("mongodb://127.0.0.1:27017/nie");
+mongoose.connect("mongodb://root:neie_rootexec@ds139942.mlab.com:39942/neie");
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error")); //DB Connection fail
-db.once("open",function(callback) {
+db.once("createConnection",function(callback) {
 	console.log("MongoDB Connection Succeeded"); //DB connection success
 });
 
@@ -146,7 +146,7 @@ var myproj = new Schema({
 	projid : String,
 	email : String
 });
-// Projects completion 
+// Projects completion
 var comp_proj = new Schema({
 	email: String,
 	nopp: Number

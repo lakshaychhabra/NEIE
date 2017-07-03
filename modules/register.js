@@ -2,19 +2,13 @@ var bcrypt = require('bcrypt'); // Crypto
 module.exports = function(app,mon) {
 /* Serve login requests at http://localhost/register */
 app.post('/register',function(req,res){
-	var dat = req.body;
-	var fn = dat.fName;
-	var ln = dat.lName;
-	var on = dat.oName;
-	var em = dat.eMail;
-	var mob = dat.phone;	
 	var pw = dat.createpwd;
-	if(!em || !mob || !pw) {
+	if(!req.body.eMail || !req.body.phone || !pw) {
 			req.flash('info', 'fe');
 			res.redirect('/');
 	}
 	else {
-		mon.Users.findOne({"cred.email":em}, function(err, user) {
+		mon.Users.findOne({"cred.email":req.body.eMail}, function(err, user) {
 			if (err) {throw err;}
 			if(!user) {
 				/* Password Matching */
@@ -26,40 +20,40 @@ app.post('/register',function(req,res){
 					if((dat.typ === "em") || (dat.typ === "en" && dat.man === "self")) {
 					var User = new mon.Users({
 						cred: {
-							firstName: fn,
-							lastName: ln,
-							orgName: on,
-							email: em,
+							firstName: req.body.fName,
+							lastName: req.body.lName,
+							orgName: req.body.oName,
+							email: req.body.eMail,
 							pwd: pwh,
 							typ: req.body.typ,
 							webs: req.body.web,
-							mobile: mob		                  
+							mobile: req.body.phone
 						}
 					});
 					}
 					else if(dat.typ === "ex") {
 					var User = new mon.Users({
 						cred: {
-							firstName: fn,
-							lastName: ln,
-							email: em,
+							firstName: req.body.fName,
+							lastName: req.body.lName,
+							email: req.body.eMail,
 							pwd: pwh,
 							typ: req.body.typ,
 							domain: req.body.domain,
-							mobile: mob		                  
+							mobile: req.body.phone
 						}
 					});
 					}
 					else {
 						var User = new mon.Users({
 							cred: {
-								orgName: dat.oName,
-								email: dat.eMail,
+								orgName: req.body.oName,
+								email: req.body.eMail,
 								pwd: pwh,
-								typ: dat.typ,
-								webs: dat.web,
-								mobile: dat.phone,
-								emp:dat.empl
+								typ: req.body.typ,
+								webs: req.body.web,
+								mobile: req.body.phone,
+								emp:req.body.empl
 						}
 					});
 					}
@@ -88,13 +82,13 @@ app.post('/register',function(req,res){
 				else {
 					req.flash('info', 'pm');
 					res.redirect('/');
-					console.log("new register");
+					// console.log("new register");
 				}
 			}
 			else {
 				req.flash('info', 'ue');
 				res.redirect('/');
-				console.log("new register");
+				// console.log("new register");
 			}
 		});
 	}

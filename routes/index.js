@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var fs = require('fs');
 var mon = require('./../modules/mongodb');
+var cool = require('cool-ascii-faces');
 
 /* Authentication and Authorization Middleware */
 var auth = function(req, res, next) {
@@ -14,6 +15,11 @@ var auth = function(req, res, next) {
 };
 /**/
 var nd = require('./../modules/non_dynamic')(router,mon,auth);
+
+//Heroku Deploy ?
+router.get('/cool', function(request, response) {
+  response.send(cool());
+});
 
 //Login Endpoint
 router.get('/login', auth, function (req, res) {
