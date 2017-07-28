@@ -1,6 +1,8 @@
 var mongoose = require('mongoose'); //MongoConnection
 /* Mongo Connectivity */
-mongoose.connect("mongodb://root:neie_rootexec@ds139942.mlab.com:39942/neie");
+var mlab = "mongodb://admin:admin123@ds139942.mlab.com:39942/neie";
+var local = "mongodb://localhost:27017/NEIE"
+mongoose.connect(mlab);
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error")); //DB Connection fail
 db.once("createConnection",function(callback) {

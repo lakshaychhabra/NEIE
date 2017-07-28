@@ -2,6 +2,7 @@ var bcrypt = require('bcrypt'); // Crypto
 module.exports = function(app,mon) {
 /* Serve login requests at http://localhost/register */
 app.post('/register',function(req,res){
+	var dat = req.body;
 	var pw = dat.createpwd;
 	if(!req.body.eMail || !req.body.phone || !pw) {
 			req.flash('info', 'fe');
@@ -62,7 +63,7 @@ app.post('/register',function(req,res){
 							res.send(error);
 						}
 						else {
-							mon.Users.findOne({"cred.email": em}, function(err, u) {
+							mon.Users.findOne({"cred.email": req.body.eMail}, function(err, u) {
 								if(err) {
 									throw err;
 								}
