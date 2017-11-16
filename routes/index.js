@@ -25,16 +25,6 @@ router.get('/register', auth, function (req, res) {
   res.redirect("/");
 });
 
-//Login Endpoint
-router.get('/login', auth, function (req, res) {
-  res.redirect("/");
-});
-
-//Register Endpoint
-router.get('/register', auth, function (req, res) {
-  res.redirect("/");
-});
-
 
 // Logout endpoint
 router.get('/logout', function (req, res) {
